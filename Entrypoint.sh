@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar /usr/unifi/lib/ace.jar start
+java -jar /usr/lib/unifi/lib/ace.jar start
