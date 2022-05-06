@@ -11,4 +11,7 @@ RUN wget https://dl.ui.com/unifi/7.1.61/unifi_sysvinit_all.deb
 # Install Controller
 RUN apt install ./unifi_sysvinit_all.deb -y
 
+# Copy Entrypoint.sh to container
+COPY Entrypoint.sh /
+
 ENTRYPOINT [ "sh", "Entrypoint.sh" ]
