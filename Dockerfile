@@ -3,7 +3,7 @@ FROM ubuntu:20.04 as build
 
 # Install Required Packages
 RUN apt update
-RUN apt Install wget openjdk-8-jre -y
+RUN apt install wget openjdk-8-jre -y
 
 # Download Controller Package
 RUN wget https://dl.ui.com/unifi/7.1.61/unifi_sysvinit_all.deb
