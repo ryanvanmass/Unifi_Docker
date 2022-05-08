@@ -2,7 +2,7 @@ version: '3'
 services:
     controller:
       image: ryanvanmass/unifi:7.1.61
-      container_name: unifi
+      container_name: 7.1.61
       restart: always
       volumes:
         - "/Unifi_Docker/Cnfig:/Config"
