@@ -12,7 +12,6 @@ services:
           - 8080:8080      # Port used for device and application communication
           - 443:443        # Port used for applicaton GUI/API as seen in Web Browser (Applications hosted on a UniFi OS Console)
           - 8443:8443      # Port used for applicaton GUI/API as seen in Web Browser (Applications hosted on Linux)
-          - 8080:8880      # Port used for HTTP portal Redirection
           - 8843:8843      # Port used for HTTPS portal redirection
           - 6789:6789      # Port used for UniFi Mobile Speed Test
           - 27117:27117    # Port used for local-bound database communication
