@@ -1,0 +1,21 @@
+version: '3'
+services:
+    controller:
+      image: ryanvanmass/unifi:7.1.61
+      container_name: unifi
+      restart: always
+      volumes:
+        - "/Unifi_Docker/Cnfig:/Config"
+      ports: 
+          - 3478:3478      # Port used for STUN
+          - 5514:5514      # Port used for Remote Syslog Capture
+          - 8080:8080      # Port used for device and application communication
+          - 443:443        # Port used for applicaton GUI/API as seen in Web Browser (Applications hosted on a UniFi OS Console)
+          - 8443:8443      # Port used for applicaton GUI/API as seen in Web Browser (Applications hosted on Linux)
+          - 8080:8880      # Port used for HTTP portal Redirection
+          - 8843:8843      # Port used for HTTPS portal redirection
+          - 6789:6789      # Port used for UniFi Mobile Speed Test
+          - 27117:27117    # Port used for local-bound database communication
+          - 5656-5699      # Ports used for AP-EDU broadcasting
+          - 10001:10001    # Port used for device discovery
+          - 1900:1900      # Port used for "Make application discoverable on L2 network" in the UniFi Network Settings
